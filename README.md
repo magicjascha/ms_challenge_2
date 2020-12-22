@@ -1,24 +1,16 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+after cloning the repository in the cloned directory run
+<code>bundle install</code>
 
-Things you may want to cover:
+the environment variables CONTENTFUL_ACCESS_TOKEN and CONTENTFUL_SPACE_ID have to be set
+e.g run the server with:
+<code>
+CONTENTFUL_ACCESS_TOKEN=... CONTENTFUL_SPACE_ID=... rails server
+</code>
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+<p>run all tests with:</p>
+<code>
+CONTENTFUL_ACCESS_TOKEN=... CONTENTFUL_SPACE_ID=... rspec spec
+</code>
+<p>(I assumed I should not share these secrets on a public github repository)</p>
