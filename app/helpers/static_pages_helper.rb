@@ -1,4 +1,10 @@
 module StaticPagesHelper
+  require 'rich_text_renderer'
+
+  def renderer
+    RichTextRenderer::Renderer.new
+  end
+
   def first_static_page_html
     staticpages = contentful.entries(content_type: 'staticPage')
     staticpages.items[1].fields[:body].html_safe
