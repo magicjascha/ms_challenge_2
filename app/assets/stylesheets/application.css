@@ -60,3 +60,7 @@ footer ul {
 footer ul li {
     margin-left: 10px;
 }
+
+.recipe img {
+    padding: 10px;
+}

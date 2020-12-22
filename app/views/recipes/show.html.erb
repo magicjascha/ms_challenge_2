@@ -1,0 +1,15 @@
+<div class="recipe">
+  <% recipe = contentful.entry(@id) %>
+  <h1><%= recipe.fields[:title] %></h1>
+  <img src="<%= recipe.photo.url %>" width=100% />
+  <p><%= recipe.fields[:description] %></p>
+  <h5>Calories:
+    <small><%= recipe.fields[:calories] %></small>
+  </h5>
+  <h5>Chefs:
+    <small><%= contentful.entries(content_type: 'chef').items.map{|chef| chef.name}.join(', ') %></small>
+  </h5>
+  <h5>Tags:
+    <small><%= recipe.tags.map{|tag| tag.name}.join(',') %></small>
+  </h5>
+</div>

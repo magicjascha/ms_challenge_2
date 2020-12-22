@@ -1,16 +1,14 @@
-<div class='container'>
-  <div class='container col-md-6 offset-lg-3 recipe-list' >
-    <h1>Recipes</h1>
-    <% recipes = contentful.entries(content_type: 'recipe') %>
-    <% recipes.each do |recipe| %>
-        <div class="row">
-          <div class="col col-md-6">
+<h1>Recipes</h1>
+<% recipes = contentful.entries(content_type: 'recipe') %>
+<% recipes.each do |recipe| %>
+    <div class="row recipe">
+      <div class="col col-md-6">
+        <a href=<%= recipe_path(recipe.id) %>>
             <img src="<%= recipe.photo.url %>" width=100% />
-          </div>
-          <div class="col col-md-6">
-            <h5><%= recipe.title %></h5>
-          </div>
-        </div>
-    <% end %>
-  </div>
-</div>
+        </a>
+      </div>
+      <div class="col col-md-6">
+        <h5><%= link_to recipe.title, recipe_path(recipe.id) %></h5>
+      </div>
+    </div>
+<% end %>
