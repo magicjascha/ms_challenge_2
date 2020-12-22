@@ -11,12 +11,12 @@
   </head>
 
   <body>
-    <%= render "layouts/topnav" %>
-    <div class='container'>
-      <div class='container col-md-8 offset-lg-2 recipe-list' >
-        <%= yield %>
+    <div class='page'>
+      <%= render "layouts/topnav" %>
+      <div class="content col-md-8 offset-lg-2">
+          <%= yield %>
       </div>
+      <%= render "layouts/footer" %>
     </div>
-    <%= render "layouts/footer" %>
   </body>
 </html>
