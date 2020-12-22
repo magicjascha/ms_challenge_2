@@ -1,0 +1,13 @@
+<footer class="footer">
+  <% footersections = contentful.entries(content_type: 'footerSection') %>
+  <nav>
+    <% footersections.each do |footersection| %>
+      <ul>
+        <h3><%= footersection.fields[:title] %></h3>
+        <% footersection.fields[:items].each do |footersectionitem| %>
+          <li><%= link_to footersectionitem.fields[:title], footersectionitem.fields[:url] %></li>
+        <% end %>
+      </ul>
+    <% end %>
+  </nav>
+</footer>
