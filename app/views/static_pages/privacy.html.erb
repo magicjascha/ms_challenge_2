@@ -1,0 +1,2 @@
+<% staticpages = contentful.entries(content_type: 'staticPage') %>
+<%= renderer.render(staticpages.items[0].fields[:rich] ).html_safe %>
