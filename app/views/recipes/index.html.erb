@@ -3,12 +3,12 @@
   <% recipes = contentful.entries(content_type: 'recipe') %>
   <% recipes.each do |recipe| %>
       <div class="row recipe">
-        <div class="col col-md-6">
+        <div class="col col-lg-3 offset-lg-2 col-md-4 offset-md-2 col-sm-6">
           <a href=<%= recipe_path(recipe.id) %>>
-              <img src="<%= recipe.photo.url %>" width=100% />
+              <img src="<%= recipe.photo.url %>"/>
           </a>
         </div>
-        <div class="col col-md-6">
+        <div class="col textbox col-lg-4 col-md-4 col-sm-6">
           <h5><%= link_to recipe.title, recipe_path(recipe.id) %></h5>
         </div>
       </div>

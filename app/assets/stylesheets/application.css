@@ -18,16 +18,29 @@
     margin-top: 20px;
 }
 
-.recipe-list .col{
+.recipe-list .textbox{
     position: relative;
 }
 
-.recipe-list .col h5{
+.recipe-list .textbox h5{
     margin: 0;
     position: absolute;
     top: 50%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
+}
+
+.recipe-list img {
+    width: 100%;
+}
+
+.recipe-list a {
+    text-decoration: none;
+    color: black;
+}
+
+.recipe .recipe-text {
+    padding: 20px;
 }
 
 html, body {
