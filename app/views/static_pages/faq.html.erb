@@ -1,6 +1,7 @@
+<h1>Frequently Asked Questions</h1>
 <% faq_sections = contentful.entries(content_type: 'faqSection') %>
 <% faq_sections.each do |faq_section| %>
-  <h1><%= faq_section.fields[:title]%> </h1>
+  <h2><%= faq_section.fields[:title]%> </h2>
   <% faq_section.fields[:items].each do |item| %>
     <strong><%= item.fields[:question] %></strong>
     <%= renderer.render(item.fields[:answer]).html_safe %>
