@@ -4,4 +4,7 @@ class StaticPagesController < ApplicationController
 
   def first_static_page
   end
+
+  def faq
+  end
 end
