@@ -1,5 +1,7 @@
 # README
 
+uses ruby version 2.7.0
+
 after cloning the repository in the cloned directory ms_challenge_2 run
 <code>bundle install</code>
 
