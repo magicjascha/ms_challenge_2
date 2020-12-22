@@ -13,3 +13,19 @@
  *= require_tree .
  *= require_self
  */
+
+.recipe-list .row {
+    margin-top: 20px;
+}
+
+.recipe-list .col{
+    position: relative;
+}
+
+.recipe-list .col h5{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}

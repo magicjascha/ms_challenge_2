@@ -1,1 +1,16 @@
-This is the recipe index view
+<div class='container'>
+  <div class='container col-md-6 offset-lg-3 recipe-list' >
+    <h1>Recipes</h1>
+    <% recipes = contentful.entries(content_type: 'recipe') %>
+    <% recipes.each do |recipe| %>
+        <div class="row">
+          <div class="col col-md-6">
+            <img src="<%= recipe.photo.url %>" width=100% />
+          </div>
+          <div class="col col-md-6">
+            <h5><%= recipe.title %></h5>
+          </div>
+        </div>
+    <% end %>
+  </div>
+</div>
